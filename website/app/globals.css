@@ -51,12 +51,6 @@ input, textarea, select {
   text-transform: none;
 }
 
-/* Fixed header on its own GPU layer — prevents scroll repaints */
-header[class*='fixed'] {
-  will-change: transform;
-  transform: translateZ(0);
-}
-
 /* Contain layout for section cards to reduce paint scope */
 .contain-layout {
   contain: layout style;
