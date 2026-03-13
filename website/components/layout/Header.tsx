@@ -135,7 +135,7 @@ export default function Header() {
         {/* Desktop CTA - pill shape */}
         <Link
           href="/shop"
-          className="hidden lg:inline-flex items-center px-6 py-2 text-sm font-bold border-[1.5px] border-dynazur-black rounded-full transition-all duration-300 hover:bg-dynazur-black hover:text-white active:scale-[0.97]"
+          className="hidden lg:inline-flex items-center px-6 py-2 text-sm font-bold border-[1.5px] border-dynazur-black rounded-full transition-all duration-300 hover:bg-dynazur-yellow hover:border-dynazur-yellow hover:text-dynazur-black active:scale-[0.97]"
         >
           Shop Now
         </Link>
