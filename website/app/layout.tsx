@@ -20,14 +20,6 @@ export const metadata: Metadata = {
   },
   description:
     "Premium print-on-demand brand offering apparel, books, mugs, home decor, and digital products. Designed for those who live in tomorrow.",
-  icons: {
-    icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },
-      { url: '/logos/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    apple: '/logos/apple-touch-icon.png',
-    shortcut: '/icon.svg',
-  },
   openGraph: {
     title: "Dynazur — For Those Who Live in Tomorrow",
     description:
@@ -43,8 +35,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/svg+xml" href={`${base}/icon.svg`} />
+        <link rel="apple-touch-icon" href={`${base}/logos/apple-touch-icon.png`} />
+      </head>
       <body className={`${nunito.variable} font-nunito antialiased`}>
         <a href="#main-content" className="skip-to-content">
           Skip to content
