@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .bg { fill: #071EFC; }
+    .fg { fill: #FFFFFF; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #FFD54F; }
+      .fg { fill: #071EFC; }
+    }
+  </style>
+  <rect width="32" height="32" rx="7" class="bg"/>
+  <text
+    x="16" y="25"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="23"
+    class="fg"
+  >d</text>
+</svg>

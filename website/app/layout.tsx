@@ -21,8 +21,12 @@ export const metadata: Metadata = {
   description:
     "Premium print-on-demand brand offering apparel, books, mugs, home decor, and digital products. Designed for those who live in tomorrow.",
   icons: {
-    icon: "/logos/favicon-32.png",
-    apple: "/logos/apple-touch-icon.png",
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/logos/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    apple: '/logos/apple-touch-icon.png',
+    shortcut: '/icon.svg',
   },
   openGraph: {
     title: "Dynazur — For Those Who Live in Tomorrow",
