@@ -52,9 +52,11 @@ export default function Footer() {
             {/* Logo column */}
             <div>
               <Link href="/" className="inline-block mb-5">
-                <img
+                <Image
                   src="/logos/logo-milky-gray.png"
                   alt="Dynazur"
+                  width={2051}
+                  height={561}
                   className="h-8 w-auto brightness-90"
                 />
               </Link>
