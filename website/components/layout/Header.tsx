@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -58,18 +57,16 @@ export default function Header() {
       <nav className="max-w-[1280px] mx-auto px-6 flex items-center justify-between h-16 lg:h-[72px]">
         {/* Logo with yellow highlight */}
         <Link href="/" className="flex items-center shrink-0" aria-label="Dynazur homepage">
-          <Image
-            src="/logos/logo-blue.png"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logos/logo-blue.png`}
             alt="Dynazur"
-            width={2051}
-            height={561}
             className="h-7 lg:h-8 w-auto hidden sm:block"
           />
-          <Image
-            src="/logos/mark-blue.png"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logos/mark-blue.png`}
             alt="Dynazur"
-            width={834}
-            height={1228}
             className="h-8 w-auto sm:hidden"
           />
         </Link>

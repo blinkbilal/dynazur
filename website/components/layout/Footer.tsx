@@ -52,11 +52,10 @@ export default function Footer() {
             {/* Logo column */}
             <div>
               <Link href="/" className="inline-block mb-5">
-                <Image
-                  src="/logos/logo-milky-gray.png"
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logos/logo-milky-gray.png`}
                   alt="Dynazur"
-                  width={2051}
-                  height={561}
                   className="h-8 w-auto brightness-90"
                 />
               </Link>
