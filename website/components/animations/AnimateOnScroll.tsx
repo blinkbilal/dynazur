@@ -58,7 +58,7 @@ export default function AnimateOnScroll({
   once = true,
 }: AnimateOnScrollProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once, margin: '-50px' });
+  const isInView = useInView(ref, { once, margin: '-20px' });
 
   return (
     <motion.div

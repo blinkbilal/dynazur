@@ -42,8 +42,24 @@ body {
   text-transform: lowercase;
 }
 
+/* Ensure text-transform cascades into button/a (some browsers reset it) */
+button, a {
+  text-transform: inherit;
+}
+
 input, textarea, select {
   text-transform: none;
+}
+
+/* Fixed header on its own GPU layer — prevents scroll repaints */
+header[class*='fixed'] {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Contain layout for section cards to reduce paint scope */
+.contain-layout {
+  contain: layout style;
 }
 
 h1, h2, h3, h4, h5, h6 {
