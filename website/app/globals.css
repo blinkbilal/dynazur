@@ -39,6 +39,11 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-transform: lowercase;
+}
+
+input, textarea, select {
+  text-transform: none;
 }
 
 h1, h2, h3, h4, h5, h6 {

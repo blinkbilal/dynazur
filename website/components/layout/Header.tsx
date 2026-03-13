@@ -7,7 +7,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { name: 'Shop', href: '/shop' },
+  { name: 'About', href: '/about' },
   {
     name: 'Products',
     href: '/products',
@@ -18,8 +18,7 @@ const navLinks = [
       { name: 'Home Decor', href: '/products/home-decor' },
     ],
   },
-  { name: 'Digital Products', href: '/digital-products' },
-  { name: 'About', href: '/about' },
+  { name: 'Digital', href: '/digital-products' },
   { name: 'Contact', href: '/contact' },
 ];
 
