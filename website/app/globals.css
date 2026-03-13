@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-dynazur-blue: #071EFC;
+  --color-dynazur-black: #050505;
+  --color-dynazur-navy: #1D2031;
+  --color-dynazur-gray: #E2E2E2;
+  --color-dynazur-bg: #EEEEF5;
+  --color-dynazur-text: #474747;
+  --color-dynazur-yellow: #FFD54F;
+  --color-dynazur-white: #FFFFFF;
+  --font-nunito: 'Nunito', sans-serif;
+  --radius-section: 30px;
+  --radius-card: 16px;
+  --radius-btn: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Hide Next.js dev overlay indicators */
+nextjs-portal,
+[data-nextjs-dialog-overlay],
+[data-nextjs-toast] {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #E8E8F2 0%, #EEEEF5 30%, #F2F2F5 100%);
+  color: var(--color-dynazur-text);
+  font-family: var(--font-nunito);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-dynazur-black);
+  font-family: var(--font-nunito);
+}
+
+h1 {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+h3 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+::selection {
+  background: rgba(7, 30, 252, 0.15);
+  color: #050505;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--color-dynazur-blue);
+  color: white;
+  font-weight: 700;
+  border-radius: 0 0 8px 0;
+}
+.skip-to-content:focus {
+  left: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dynazur-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #C0C0C8;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #071EFC;
+}
+
+/* Shimmer skeleton loading */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(7, 30, 252, 0.04) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet {
+  background: var(--color-dynazur-gray) !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background: var(--color-dynazur-blue) !important;
+}
